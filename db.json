@@ -1,0 +1,46 @@
+{
+  "dishes": [
+    {
+      "id": 1,
+      "name": "Бешбармак",
+      "category": "meat",
+      "description": "Традиционное мясное блюдо с лапшой",
+      "image": "images/beshbarmak.jpg",
+      "name_translations": ["Бешбармак", "Beshbarmak", "Бешбармак"],
+      "description_translations": [
+        "Традиционное мясное блюдо с лапшой",
+        "Traditional meat dish with noodles",
+        "Дәстүрлүк эттен жасалган тарык менен тамак"
+      ],
+      "category_translations": ["Мясо", "Meat", "Эт"]
+    },
+    {
+      "id": 2,
+      "name": "Курут",
+      "category": "dairy",
+      "description": "Сухой молочный продукт",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOWn2UMUI3D8o4T7mCJh5HYxLHEgL5MNlRww&s",
+      "name_translations": ["Курут", "Kurut", "Курут"],
+      "description_translations": [
+        "Сухой молочный продукт",
+        "Dried dairy product",
+        "Кургатылган сүт азыгы"
+      ],
+      "category_translations": ["Молочные", "Dairy", "Сүт азыктары"]
+    },
+    {
+      "id": 3,
+      "name": "Чак-чак",
+      "category": "dessert",
+      "description": "Сладкая выпечка с медом",
+      "image": "images/chakchak.jpg",
+      "name_translations": ["Чак-чак", "Chak-Chak", "Чак-чак"],
+      "description_translations": [
+        "Сладкая выпечка с медом",
+        "Sweet pastry with honey",
+        "Бал кошулган таттуу бышырулган нан"
+      ],
+      "category_translations": ["Десерт", "Dessert", "Десерт"]
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 export default {
   name: "HomeHero",
+
   template: `
     <section class="relative h-screen flex items-center justify-center text-center bg-cover bg-center"
               style="background-image: url('../images/bg.png') ;">

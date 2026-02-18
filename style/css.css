@@ -1,0 +1,70 @@
+/* Скрыть верхнюю панель Google */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+/* Убрать отступ сверху который добавляет Google */
+body {
+  top: 0px !important;
+}
+
+/* Скрыть всплывающую подсказку */
+.goog-tooltip {
+  display: none !important;
+}
+
+.goog-tooltip:hover {
+  display: none !important;
+}
+
+/* Убрать выделение текста */
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
+.goog-te-balloon-frame {
+  display: none !important;
+}
+
+.goog-tooltip {
+  display: none !important;
+}
+
+.goog-tooltip:hover {
+  display: none !important;
+}
+
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* Убираем iframe Google */
+iframe.skiptranslate {
+  display: none !important;
+}
+
+/* Убираем верхний отступ */
+body {
+  top: 0px !important;
+}
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-enter-from {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+.slide-fade-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+.slide-fade-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+}
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}

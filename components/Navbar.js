@@ -8,6 +8,28 @@ export default {
       selectedLang: "ru",
     };
   },
+  methods: {
+    updateFilters() {
+      // отправляем родителю
+      this.$emit("update-filters", {
+        category: this.filterCategory,
+        searchQuery: this.searchQuery,
+      });
+      this.$router.push("/#dishes");
+    },
+  },
+  watch: {
+    selectedLang(newLang) {
+      setTimeout(() => {
+        const select = document.querySelector(".goog-te-combo");
+        if (select) {
+          select.value = newLang;
+          select.dispatchEvent(new Event("change"));
+        }
+      }, 500);
+    },
+  },
+
   template: `
     <nav class="bg-orange-500 text-white sticky top-0 z-50 shadow-md">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,20 +39,20 @@ export default {
           <!-- Десктоп меню -->
           <div class="hidden md:flex items-center space-x-4">
             <router-link to="/" class="hover:underline">Главная</router-link>
-            <router-link to="/about" class="hover:underline">О кухне</router-link>
+            <router-link to="/#about" class="hover:underline">О кухне</router-link>
 
-            <select v-model="filterCategory" class="bg-orange-400 text-white rounded px-2 py-1 hover:bg-orange-600">
-              <option value="">Все блюда</option>
-              <option value="meat">Мясные</option>
+            <select v-model="filterCategory" @change="updateFilters"  class="bg-orange-400 text-white rounded px-2 py-1 hover:bg-orange-600">
+              <option value="" >Все блюда</option>
+              <option value="meat" >Мясные</option>
               <option value="dairy">Молочные</option>
               <option value="dessert">Десерты</option>
             </select>
 
-            <input v-model="searchQuery" type="text" placeholder="Поиск..." class="px-2 py-1 rounded text-black focus:outline-none"/>
+            <input v-model="searchQuery" type="text" placeholder="Поиск..." @input="updateFilters" class="px-2 py-1 rounded text-black focus:outline-none"/>
 
             <select v-model="selectedLang" class="bg-orange-400 text-white rounded px-2 py-1 hover:bg-orange-600">
               <option value="ru">RU</option>
-              <option value="kg">KG</option>
+              <option value="ky">KG</option>
               <option value="en">EN</option>
             </select>
           </div>
@@ -54,22 +76,23 @@ export default {
       </div>
 
       <!-- Мобильное меню -->
-      <div v-if="open" class="md:hidden bg-orange-500 px-2 pt-2 pb-3 space-y-1">
-        <router-link @click="open=false" to="/" class="block px-3 py-2 rounded hover:bg-orange-600">Главная</router-link>
-        <router-link @click="open=false" to="/about" class="block px-3 py-2 rounded hover:bg-orange-600">О кухне</router-link>
-        <select v-model="filterCategory" class="w-full px-2 py-1 rounded mt-2 text-black">
-          <option value="">Все блюда</option>
-          <option value="meat">Мясные</option>
-          <option value="dairy">Молочные</option>
-          <option value="dessert">Десерты</option>
-        </select>
-        <input v-model="searchQuery" type="text" placeholder="Поиск..." class="w-full px-2 py-1 rounded mt-2 text-black focus:outline-none"/>
-        <select v-model="selectedLang" class="w-full px-2 py-1 rounded mt-2 text-black">
-          <option value="ru">RU</option>
-          <option value="kg">KG</option>
-          <option value="en">EN</option>
-        </select>
-      </div>
-    </nav>
-  `
+      <transition name="slide-fade">
+  <div v-if="open" class="md:hidden bg-orange-500 px-2 pt-2 pb-3 space-y-1">
+    <router-link @click="open=false" to="/" class="block px-3 py-2 rounded hover:bg-orange-600">Главная</router-link>
+    <router-link @click="open=false" to="/#about" class="block px-3 py-2 rounded hover:bg-orange-600">О кухне</router-link>
+    <select v-model="filterCategory" @change="updateFilters" class="w-full px-2 py-1 rounded mt-2 text-black">
+      <option value="">Все блюда</option>
+      <option value="meat">Мясные</option>
+      <option value="dairy">Молочные</option>
+      <option value="dessert">Десерты</option>
+    </select>
+    <input v-model="searchQuery" @input="updateFilters" type="text" placeholder="Поиск..." class="w-full px-2 py-1 rounded mt-2 text-black focus:outline-none"/>
+    <select v-model="selectedLang" class="w-full px-2 py-1 rounded mt-2 text-black">
+      <option value="ru">RU</option>
+      <option value="ky">KG</option>
+      <option value="en">EN</option>
+    </select>
+  </div>
+</transition>
+  `,
 };
