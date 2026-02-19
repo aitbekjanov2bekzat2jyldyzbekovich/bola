@@ -68,3 +68,40 @@ body {
   opacity: 0;
   transform: translateY(-10px);
 }
+
+/* Анимация фона */
+.intro-fade-enter-active,
+.intro-fade-leave-active {
+  transition: opacity 1s ease;
+}
+.intro-fade-enter-from,
+.intro-fade-leave-to {
+  opacity: 0;
+}
+
+/* Анимация текста */
+.intro-slide-enter-active {
+  transition: all 0.8s ease;
+}
+.intro-slide-enter-from {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.intro-slide-leave-active {
+  position: absolute;
+}
+.intro-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-40px);
+}
+.fade-zoom-enter-from {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.fade-zoom-enter-to {
+  opacity: 1;
+  transform: scale(1);
+}
+.fade-zoom-enter-active {
+  transition: all 500ms ease;
+}

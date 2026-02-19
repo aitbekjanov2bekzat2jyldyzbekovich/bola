@@ -1,5 +1,4 @@
 import Home from "../views/Home.js";
-
 const routes = [{ path: "/", component: Home }];
 
 const router = VueRouter.createRouter({

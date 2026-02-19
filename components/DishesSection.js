@@ -58,6 +58,7 @@ export default {
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
+          dynamicBullets: true,
         },
       });
     },
@@ -82,13 +83,14 @@ export default {
       </h2>
 
       <!-- КАРУСЕЛЬ -->
-      <div v-if="!showAll" class="swiper dishes-swiper pb-14">
+      <div v-if="!showAll" class="swiper dishes-swiper pb-14"   data-aos="zoom-in">
         <div class="swiper-wrapper">
 
           <div 
             class="swiper-slide" 
             v-for="dish in dishes" 
             :key="dish.id"
+        
           >
             <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group">
 
@@ -128,6 +130,7 @@ export default {
       <div 
         v-if="showAll"
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
+         data-aos="zoom-in"
       >
         <div 
           v-for="dish in dishes" 

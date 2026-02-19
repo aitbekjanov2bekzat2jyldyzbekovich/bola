@@ -5,14 +5,22 @@
       "name": "Бешбармак",
       "category": "meat",
       "description": "Традиционное мясное блюдо с лапшой",
-      "image": "images/beshbarmak.jpg",
+      "image": "https://lifehacker.ru/wp-content/uploads/2024/11/207_1732664622.jpg",
       "name_translations": ["Бешбармак", "Beshbarmak", "Бешбармак"],
       "description_translations": [
         "Традиционное мясное блюдо с лапшой",
         "Traditional meat dish with noodles",
         "Дәстүрлүк эттен жасалган тарык менен тамак"
       ],
-      "category_translations": ["Мясо", "Meat", "Эт"]
+      "category_translations": ["Мясо", "Meat", "Эт"],
+      "history": "Бешбармак — одно из самых значимых национальных блюд кыргызской кухни, традиционно готовили на семейных торжествах, праздниках и для гостей. Название означает \"пять пальцев\", так как блюдо ели руками, а предшественником считается наарын — мясо с лапшой, распространённое в Нарынской области. :contentReference[oaicite:0]{index=0}",
+      "recipe": "Отварить мясо (баранину, говядину или конину) до мягкости, отдельно приготовить домашнюю лапшу, нарезать мясо, смешать с лапшой и подавать с бульоном и луком. :contentReference[oaicite:1]{index=1}",
+      "video": "https://www.youtube.com/watch?v=WdG3qZoTD0Q",
+      "places_in_naryn": [
+        { "name": "Khan Tengri Restaurant", "coordinates": [41.428, 75.991] },
+        { "name": "Fayiza", "coordinates": [41.425, 75.996] },
+        { "name": "Kafe Boorsok", "coordinates": [41.427, 75.995] }
+      ]
     },
     {
       "id": 2,
@@ -26,21 +34,154 @@
         "Dried dairy product",
         "Кургатылган сүт азыгы"
       ],
-      "category_translations": ["Молочные", "Dairy", "Сүт азыктары"]
+      "category_translations": ["Молочные", "Dairy", "Сүт азыктары"],
+      "history": "Курут — традиционный продукт кочевой кухни, использовался в Нарынской и других областях для длительного сохранения молочных продуктов в условиях кочевого образа жизни и зимних переходов. :contentReference[oaicite:2]{index=2}",
+      "recipe": "Прокипятить молоко с закваской, дать сгуститься, затем нарезать на кусочки и высушить до плотного состояния. :contentReference[oaicite:3]{index=3}",
+      "video": "https://www.youtube.com/watch?v=kurut_recipe",
+      "places_in_naryn": [
+        { "name": "Khan Tengri Restaurant", "coordinates": [41.428, 75.991] }
+      ]
     },
     {
       "id": 3,
       "name": "Чак-чак",
       "category": "dessert",
       "description": "Сладкая выпечка с медом",
-      "image": "images/chakchak.jpg",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJWilZJ64GAiCfPKJsfDcBUGezdq2KhUg-0Q&s",
       "name_translations": ["Чак-чак", "Chak-Chak", "Чак-чак"],
       "description_translations": [
         "Сладкая выпечка с медом",
         "Sweet pastry with honey",
         "Бал кошулган таттуу бышырулган нан"
       ],
-      "category_translations": ["Десерт", "Dessert", "Десерт"]
+      "category_translations": ["Десерт", "Dessert", "Десерт"],
+      "history": "Чак‑чак — сладкое блюдо, пришедшее в кыргызскую кухню из тюркских традиций, часто готовилось в Нарынской области на семейных праздниках и угощение для гостей. :contentReference[oaicite:4]{index=4}",
+      "recipe": "Замесить тесто, нарезать на кусочки, обжарить и залить горячим медом. :contentReference[oaicite:5]{index=5}",
+      "video": "https://www.youtube.com/watch?v=chakchak_recipe",
+      "places_in_naryn": [
+        { "name": "Kafe Boorsok", "coordinates": [41.427, 75.995] },
+        { "name": "KulturCafe Naryn", "coordinates": [41.426, 75.993] }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Куурдак",
+      "category": "meat",
+      "description": "Жареное мясо с луком",
+      "image": "https://ilovekg.com/images/food/kuurdak.webp",
+      "name_translations": ["Куурдак", "Kuurdak", "Куурдак"],
+      "description_translations": [
+        "Жареное мясо с луком",
+        "Fried meat with onions",
+        "Пияз менен кыздырылган эт"
+      ],
+      "category_translations": ["Мясо", "Meat", "Эт"],
+      "history": "Куурдак — одно из древних мясных блюд Центральной Азии, распространённое и в кыргызской кухне. Его готовили быстро, сытно и подавали как второе блюдо. :contentReference[oaicite:6]{index=6}",
+      "recipe": "Мясо нарезают кусочками, обжаривают с луком и овощами до золотистой корочки. :contentReference[oaicite:7]{index=7}",
+      "video": "https://www.youtube.com/watch?v=kuurdak_recipe",
+      "places_in_naryn": [
+        { "name": "Khan Tengri Restaurant", "coordinates": [41.428, 75.991] }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Манты",
+      "category": "dumpling",
+      "description": "Паровые пельмени с мясной начинкой",
+      "image": "https://i.obozrevatel.com/food/recipemain/2019/1/9/125.jpg",
+      "name_translations": ["Манты", "Manti", "Манты"],
+      "description_translations": [
+        "Паровые пельмени с мясной начинкой",
+        "Steamed dumplings with meat filling",
+        "Эт менен бышырылган буу менен пельмендер"
+      ],
+      "category_translations": ["Пельмени", "Dumpling", "Пельмендер"],
+      "history": "Манты — распространённое блюдо в кыргызской кухне, готовятся на пару из теста с начинкой из мяса и лука, особенно в холодное время года. :contentReference[oaicite:8]{index=8}",
+      "recipe": "Приготовить тонкое тесто, сделать начинку из мяса с луком, сформировать манты и готовить на пару. :contentReference[oaicite:9]{index=9}",
+      "video": "https://www.youtube.com/watch?v=manti_recipe",
+      "places_in_naryn": [
+        { "name": "Fayiza", "coordinates": [41.425, 75.996] }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Лагман",
+      "category": "noodle",
+      "description": "Лапша с мясом и овощами",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_D8Rd8KQ0GEdDPgLdy_ByuoUL3v7Kz_aFsA&s",
+      "name_translations": ["Лагман", "Lagman", "Лагман"],
+      "description_translations": [
+        "Лапша с мясом и овощами",
+        "Noodles with meat and vegetables",
+        "Эт жана жашылча менен тарык"
+      ],
+      "category_translations": ["Лапша", "Noodle", "Тарык"],
+      "history": "Лагман имеет уйгурские и дунганские корни, но стал любимым блюдом в кыргызской кухне, особенно в горах и холодный сезон. :contentReference[oaicite:10]{index=10}",
+      "recipe": "Домашнюю лапшу варят, мясо и овощи тушат в бульоне, затем смешивают с лапшой. :contentReference[oaicite:11]{index=11}",
+      "video": "https://www.youtube.com/watch?v=lagman_recipe",
+      "places_in_naryn": [
+        { "name": "Khan Tengri Restaurant", "coordinates": [41.428, 75.991] }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Самсы",
+      "category": "pastry",
+      "description": "Пирожки с мясной или овощной начинкой",
+      "image": "https://images.gastronom.ru/U6s74OBBTePYtiFvVgzM1wqI1581cMlIXQ5xD4sgtog/pr:recipe-preview-image/g:ce/rs:auto:0:0:0/L2Ntcy9hbGwtaW1hZ2VzLzhmNmY1ODI1LThkYzctNDczYS04NWJiLTUyNDQyMjU1YWMyZC5qcGc",
+      "name_translations": ["Самсы", "Samsa", "Самсы"],
+      "description_translations": [
+        "Пирожки с мясной или овощной начинкой",
+        "Pastries with meat or vegetable filling",
+        "Эт же жашылча менен самса"
+      ],
+      "category_translations": ["Выпечка", "Pastry", "Нан бышырулма"],
+      "history": "Самсы — популярная выпечка в кыргызской кухне, часто готовится на рынках и праздниках, распространена также в Нарынской области. :contentReference[oaicite:12]{index=12}",
+      "recipe": "Приготовить тесто, наполнить начинкой из мяса или овощей и запечь или обжарить. :contentReference[oaicite:13]{index=13}",
+      "video": "https://www.youtube.com/watch?v=samsa_recipe",
+      "places_in_naryn": [
+        { "name": "Kafe Boorsok", "coordinates": [41.427, 75.995] }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Шорпо",
+      "category": "soup",
+      "description": "Мясной суп с овощами",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK-CQpMg9Pe9N47ynwg4tQqvBfnkRqzH-3lA&s",
+      "name_translations": ["Шорпо", "Shorpo", "Шорпо"],
+      "description_translations": [
+        "Мясной суп с овощами",
+        "Meat soup with vegetables",
+        "Эт жана жашылча менен шорпо"
+      ],
+      "category_translations": ["Суп", "Soup", "Шорпо"],
+      "history": "Шорпо распространён во всей кыргызской кухне как густой мясной бульон с овощами, который согревает и питает, особенно в горах и холодную погоду. :contentReference[oaicite:14]{index=14}",
+      "recipe": "Варить куски мяса с овощами до мягкости, подавать горячим. :contentReference[oaicite:15]{index=15}",
+      "video": "https://www.youtube.com/watch?v=shorpo_recipe",
+      "places_in_naryn": [
+        { "name": "Khan Tengri Restaurant", "coordinates": [41.428, 75.991] }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Боорсок",
+      "category": "dessert",
+      "description": "Жареные кусочки теста, подаются с чаем",
+      "image": "https://ilovekg.com/images/food/boorsok.webp",
+      "name_translations": ["Боорсок", "Boorsok", "Боорсок"],
+      "description_translations": [
+        "Жареные кусочки теста, подаются с чаем",
+        "Fried dough pieces, served with tea",
+        "Чай менен берилген кыздырылган камыр"
+      ],
+      "category_translations": ["Десерт", "Dessert", "Десерт"],
+      "history": "Боорсок — традиционное жареное тесто, популярное как десерт или закуска с чаем, часто подаётся на праздники и семейные застолья. :contentReference[oaicite:16]{index=16}",
+      "recipe": "Замесить тесто, разрезать на кусочки и жарить до золотистого цвета. :contentReference[oaicite:17]{index=17}",
+      "video": "https://www.youtube.com/watch?v=boorsok_recipe",
+      "places_in_naryn": [
+        { "name": "Kafe Boorsok", "coordinates": [41.427, 75.995] }
+      ]
     }
   ]
 }

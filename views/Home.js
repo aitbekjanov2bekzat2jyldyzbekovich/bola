@@ -1,5 +1,6 @@
 import HomeHero from "../components/HomeHero.js";
 import About from "../components/About.js";
+import DataDish from "../components/DataDish.js";
 import DishesSection from "../components/DishesSection.js";
 import EventsSection from "../components/EventsSection.js";
 import SearchResult from "../components/SearchResult.js"; // поправил название
@@ -7,7 +8,14 @@ import { apiFetch } from "../utils/api.js";
 
 export default {
   name: "Home",
-  components: { HomeHero, DishesSection, EventsSection, About, SearchResult },
+  components: {
+    HomeHero,
+    DishesSection,
+    EventsSection,
+    About,
+    SearchResult,
+    DataDish,
+  },
 
   data() {
     return {
@@ -52,7 +60,7 @@ export default {
         "description",
         "name_translations",
         "description_translations",
-         "category_translations"
+        "category_translations",
       ],
       threshold: 0.3,
       ignoreLocation: true,
@@ -66,7 +74,9 @@ export default {
       <About id="about"/>
       <DishesSection :dishes="filteredDishes" id="dishes"/>
       <SearchResult :result="filteredDishes" :status="this.filters.searchQuery"/>
+      <DataDish id="dish"/>
       <EventsSection />
+      
     </div>
   `,
 };
