@@ -1,22 +1,11 @@
-import Navbar from "./components/Navbar.js";
-import Footer from "./components/Footer.js";
 import router from "./router.js";
 
-const app = Vue.createApp({
-  data() {
-    return {
-      filters: { category: "" },
-    };
-  },
+const App = {
   template: `
-    <Navbar @update-filters="filters = $event" />
-    <router-view :filters="filters" />
-    <Footer />
+    <router-view></router-view>
   `,
-});
+};
 
-app.component("Navbar", Navbar);
-app.component("Footer", Footer);
-
+const app = Vue.createApp(App);
 app.use(router);
 app.mount("#app");

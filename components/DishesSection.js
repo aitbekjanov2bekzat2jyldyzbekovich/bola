@@ -35,34 +35,41 @@ export default {
 
   methods: {
     initSwiper() {
-      if (this.swiper) {
+      // Безопасное уничтожение
+      if (this.swiper && typeof this.swiper.destroy === "function") {
         this.swiper.destroy(true, true);
+        this.swiper = null;
       }
 
-      this.swiper = new Swiper(".dishes-swiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
-        breakpoints: {
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-          dynamicBullets: true,
-        },
+      this.$nextTick(() => {
+        const el = document.querySelector(".dishes-swiper");
+
+        if (!el) return; // если DOM ещё нет — выходим
+
+        this.swiper = new Swiper(el, {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          breakpoints: {
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+          },
+        });
       });
     },
-
     toggleView() {
       this.showAll = !this.showAll;
 
@@ -87,9 +94,14 @@ export default {
         <div class="swiper-wrapper">
 
           <div 
-            class="swiper-slide" 
+            class="swiper-slide cursor-pointer" 
             v-for="dish in dishes" 
             :key="dish.id"
+           @click="$router.push({
+  name: 'DishDetail',
+  params: { id: dish.id },
+  hash:   '#' + dish.id
+})"
         
           >
             <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group">
@@ -135,7 +147,12 @@ export default {
         <div 
           v-for="dish in dishes" 
           :key="dish.id"
-          class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group"
+          class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group cursor-pointer"
+           @click="$router.push({
+  name: 'DishDetail',
+  params: { id: dish.id },
+  hash:   '#' + dish.id
+})"
         >
           <div class="overflow-hidden">
             <img 

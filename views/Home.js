@@ -1,8 +1,6 @@
 import HomeHero from "../components/HomeHero.js";
 import About from "../components/About.js";
-import DataDish from "../components/DataDish.js";
 import DishesSection from "../components/DishesSection.js";
-import EventsSection from "../components/EventsSection.js";
 import SearchResult from "../components/SearchResult.js"; // поправил название
 import { apiFetch } from "../utils/api.js";
 
@@ -11,10 +9,9 @@ export default {
   components: {
     HomeHero,
     DishesSection,
-    EventsSection,
+
     About,
     SearchResult,
-    DataDish,
   },
 
   data() {
@@ -25,19 +22,27 @@ export default {
     };
   },
 
-  props: ["filters"],
+  props: {
+    filters: {
+      type: Object,
+      default: () => ({
+        category: "",
+        searchQuery: "",
+      }),
+    },
+  },
 
   computed: {
     filteredDishes() {
       // Сначала фильтр по категории
       let filtered = this.dishes.filter((dish) => {
         return (
-          !this.filters.category || dish.category === this.filters.category
+          !this.filters?.category || dish.category === this.filters?.category
         );
       });
 
       // Если есть текст поиска — используем Fuse.js
-      if (this.filters.searchQuery && this.fuse) {
+      if (this.filters?.searchQuery && this.fuse) {
         return this.fuse
           .search(this.filters.searchQuery)
           .map((result) => result.item)
@@ -74,9 +79,6 @@ export default {
       <About id="about"/>
       <DishesSection :dishes="filteredDishes" id="dishes"/>
       <SearchResult :result="filteredDishes" :status="this.filters.searchQuery"/>
-      <DataDish id="dish"/>
-      <EventsSection />
-      
     </div>
   `,
 };
