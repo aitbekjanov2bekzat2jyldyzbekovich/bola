@@ -27,7 +27,7 @@ const router = VueRouter.createRouter({
         behavior: "smooth",
       };
     }
-    return { top: 0 };
+    return { top: 0, behavior: "smooth" };
   },
 });
 

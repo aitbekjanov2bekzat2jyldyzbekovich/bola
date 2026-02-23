@@ -19,7 +19,7 @@ export default {
     <Navbar @update-filters="filters = $event" />
     <Home :filters="filters"/>
     <router-view  />
-    // <EventsSection/>
+  <EventsSection id="events"/>
     <Footer />
   `,
 };
